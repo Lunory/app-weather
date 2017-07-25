@@ -1,0 +1,101 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-cocoalumberjack@~0.0.4",
+        "scope": null,
+        "escapedName": "cordova-plugin-cocoalumberjack",
+        "name": "cordova-plugin-cocoalumberjack",
+        "rawSpec": "~0.0.4",
+        "spec": ">=0.0.4 <0.1.0",
+        "type": "range"
+      },
+      "/Users/user/cordova-app/node_modules"
+    ]
+  ],
+  "_from": "cordova-plugin-cocoalumberjack@>=0.0.4 <0.1.0",
+  "_id": "cordova-plugin-cocoalumberjack@0.0.4",
+  "_inCache": true,
+  "_location": "/cordova-plugin-cocoalumberjack",
+  "_nodeVersion": "6.10.2",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-cocoalumberjack-0.0.4.tgz_1494004911721_0.7355769029818475"
+  },
+  "_npmUser": {
+    "name": "christocracy",
+    "email": "chris@transistorsoft.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-cocoalumberjack@~0.0.4",
+    "scope": null,
+    "escapedName": "cordova-plugin-cocoalumberjack",
+    "name": "cordova-plugin-cocoalumberjack",
+    "rawSpec": "~0.0.4",
+    "spec": ">=0.0.4 <0.1.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-cocoalumberjack/-/cordova-plugin-cocoalumberjack-0.0.4.tgz",
+  "_shasum": "53f73367a92472dee2d2db05c575e9639219902b",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-cocoalumberjack@~0.0.4",
+  "_where": "/Users/user/cordova-app/node_modules",
+  "author": {
+    "name": "Chris Scott, Transistor Software"
+  },
+  "bugs": {
+    "url": "https://github.com/transistorsoft/cordova-plugin-cocoalumberjack/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-cocoalumberjack",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "dependencies": {},
+  "description": "Cordova wrapper for iOS CocoaLumberjack logging framework",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "53f73367a92472dee2d2db05c575e9639219902b",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-cocoalumberjack/-/cordova-plugin-cocoalumberjack-0.0.4.tgz"
+  },
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "gitHead": "371604e15da10b77505826722a58179daef9b830",
+  "homepage": "https://github.com/transistorsoft/cordova-cocoalumberjack#README",
+  "keywords": [
+    "logging",
+    "cordova",
+    "cocoa lumberjack",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "phonegap"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "christocracy",
+      "email": "chris@transistorsoft.com"
+    }
+  ],
+  "name": "cordova-plugin-cocoalumberjack",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/transistorsoft/cordova-plugin-cocoalumberjack.git"
+  },
+  "scripts": {},
+  "version": "0.0.4"
+}

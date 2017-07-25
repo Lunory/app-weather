@@ -1,0 +1,6 @@
+*.DS_Store
+.idea
+.AppleDouble
+.LSOverride
+node_modules/
+platforms
