@@ -145,42 +145,39 @@ var app = {
         };
     },
 
-    getTime: function(dataWeather) {
-        var time = new Date(dataWeather.currently.time * 1000);
-        var time = new Date(
-            dataWeather.currently.time * 1000 +
-            time.getTimezoneOffset() * 60000 +
-            dataWeather.offset * 3600000
+      getTime: function(offset, time) {
+        var newTime = new Date(time * 1000);
+        newTime = new Date(
+          time * 1000 +
+          newTime.getTimezoneOffset() * 60000 +
+          offset * 3600000
         );
 
-        return time;
-    },
+        return newTime;
+      },
 
-    renderWeather: function(dataWeather) {
-        var dateNow = this.getTime(dataWeather);
+      renderWeather: function(dataWeather) {
+        var dateNow = this.getTime(dataWeather.offset, dataWeather.currently.time).getDate();
 
-        document.querySelector('.name-town').innerHTML = dataWeather.timezone.replace('/', '\n')
+        document.querySelector('.name-town').innerHTML = dataWeather.timezone.replace('/', '\n');
         document.querySelector('.weather-description').innerHTML = dataWeather.currently.summary;
         document.querySelector('.weather-temp').innerHTML = Math.round(dataWeather.currently.temperature) + '&#176;';
-        document.querySelector('.info-day').innerText = 'Сегодня ' + dateNow.getDate();
+        document.querySelector('.info-day').innerText = 'Сегодня ' + dateNow;
         var weatherDaily = document.querySelector('.weather-daily');
-        var dayNow = dateNow.getDate();
-
         var inner = '';
 
         for (var i = 1; i < 8; i++) {
-            dayNow++;
-            inner += '<li class="table-view-cell">' +
-                '<span>' + dayNow + '</span>' +
-                '<img src="img/' + dataWeather.daily.data[i].icon + '.svg">' +
-                '<span>' + Math.round(dataWeather.daily.data[i].temperatureMin) + '&#176; - ' +
-                    + Math.round(dataWeather.daily.data[i].temperatureMax) + '&#176;' +
-                '</span>' +
+          inner += '<li class="table-view-cell">' +
+            '<span>' + this.getTime(dataWeather.offset, dataWeather.daily.data[i].time).getDate() + '</span>' +
+            '<img src="img/' + dataWeather.daily.data[i].icon + '.svg">' +
+            '<span>' + Math.round(dataWeather.daily.data[i].temperatureMin) + '&#176; - ' +
+            + Math.round(dataWeather.daily.data[i].temperatureMax) + '&#176;' +
+            '</span>' +
             '</li>';
         }
 
         weatherDaily.innerHTML = inner;
-    },
+      },
 
     renderCities: function() {
         var container = document.querySelector('.table-cities');
